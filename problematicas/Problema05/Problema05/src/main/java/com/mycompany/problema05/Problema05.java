@@ -14,16 +14,25 @@ public class Problema05 {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        entrada.useLocale(Locale.US);
-        int tabla;
-        int operacion;
-        int contador = 1;
-        String cadena = "";
+        int n = 0;
+        int d = 3;
+        int contador = 0;
+        String cadena1 = "1";
         do {
-            operacion = tabla + contador; 
-            System.out.printf("");
-            contador = contador +0+3+5+7+9+11;
-        } while (contador <= 37);
+            if (contador % 2 == 0) {
+                n = +1 / d;
+                cadena1 = String.format("%s- 1/%d ",
+                        cadena1,
+                        d);
+            } else {
+                n = -1 / d;
+                cadena1 = String.format("%s+ 1/%d ",cadena1,d);
+            }
+            d = d + 2;
+            contador = contador + 1;
+        } while (contador <= 6);
+        System.out.printf("%s\n", cadena1);
 
     }
 }
+
